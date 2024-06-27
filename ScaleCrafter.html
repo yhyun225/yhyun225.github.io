@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://yingqinghe.github.io/scalecrafter/ -->
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="description" content="ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models">
+  <meta property="og:title" content="ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models">
+  <meta property="og:description" content="ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="static/images/carousel1.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:title" content="ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models">
+  <meta name="twitter:description" content="ScaleCrafter: Tuning-free Higher-Resolution Visual Generation with Diffusion Models">
+  <meta name="twitter:image" content="static/images/carousel1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ScaleCrafter</title>
+  <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style><link rel="icon" type="image/x-icon" href="https://yingqinghe.github.io/scalecrafter/static/images/favicon.ico">
+  <link href="./ScaleCrafter_files/css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./ScaleCrafter_files/bulma.min.css">
+  <link rel="stylesheet" href="./ScaleCrafter_files/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./ScaleCrafter_files/bulma-slider.min.css">
+  <link rel="stylesheet" href="./ScaleCrafter_files/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./ScaleCrafter_files/academicons.min.css">
+  <link rel="stylesheet" href="./ScaleCrafter_files/index.css">
+  <link rel="stylesheet" href="./ScaleCrafter_files/oov2wcw.css">
+  <script src="./ScaleCrafter_files/jquery.min.js"></script>
+  <script src="./ScaleCrafter_files/main.js"></script><script src="./ScaleCrafter_files/ViewSDKInterface.js"></script>
+  <script defer="" src="./ScaleCrafter_files/fontawesome.all.min.js"></script>
+  <script src="./ScaleCrafter_files/bulma-carousel.min.js"></script>
+  <script src="./ScaleCrafter_files/bulma-slider.min.js"></script>
+  <script src="./ScaleCrafter_files/index.js"></script>
+  
+
+<style type="text/css">.ViewSDK_hideOverflow {
+        overflow: hidden;
+    }</style><style type="text/css">.ViewSDK_parentRelativeWidth {
+        width: 100%;
+    }</style><style type="text/css">.ViewSDK_viewportRelativeWidth {
+        width: 100vw;
+    }</style><style type="text/css">.ViewSDK_parentRelativeHeight {
+        height: 100%;
+    }</style><style type="text/css">.ViewSDK_viewportRelativeHeight {
+        height: 100vh;
+    }</style><style type="text/css">.ViewSDK_fullScreenPDFViewer {
+        width:100vw !important; height:100vh !important;
+        max-width:100vw !important; max-height:100vh !important;
+        position:fixed; top:0; left:0; z-index:99999;
+        margin: 0 !important; padding: 0 !important;
+        border: none !important;
+    }</style><style type="text/css">:root { --ViewSDK-mobile-viewport-height:1vh; }</style><style type="text/css">.ViewSDK_fullScreenPDFViewerMobile {
+        width:100vw !important; height:calc(100 * var(--ViewSDK-mobile-viewport-height)) !important;
+        max-width:100vw !important; max-height:calc(100 * var(--ViewSDK-mobile-viewport-height)) !important;
+        position:fixed; top:0; left:0; z-index:99999;
+        margin: 0 !important; padding: 0 !important;
+        border: none !important;
+    }</style><style type="text/css">.ViewSDK_hideOverflow {
+        overflow: hidden;
+    }</style><style type="text/css">.ViewSDK_parentRelativeWidth {
+        width: 100%;
+    }</style><style type="text/css">.ViewSDK_viewportRelativeWidth {
+        width: 100vw;
+    }</style><style type="text/css">.ViewSDK_parentRelativeHeight {
+        height: 100%;
+    }</style><style type="text/css">.ViewSDK_viewportRelativeHeight {
+        height: 100vh;
+    }</style><style type="text/css">.ViewSDK_fullScreenPDFViewer {
+        width:100vw !important; height:100vh !important;
+        max-width:100vw !important; max-height:100vh !important;
+        position:fixed; top:0; left:0; z-index:9999;
+        margin: 0 !important; padding: 0 !important;
+        border: none !important;
+    }</style><style type="text/css">.ViewSDK_LBFullScreenPDFViewer {
+        width:100vw !important; height:100vh !important;
+        max-width:100vw !important; max-height:100vh !important;
+        position:fixed; top:0; left:0; z-index:10000;
+        margin: 0 !important; padding: 0 !important;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: none !important;
+    }</style><style type="text/css">:root { --ViewSDK-mobile-viewport-height:1vh; }</style><style type="text/css">.ViewSDK_fullScreenPDFViewerMobile {
+        width:100vw !important; height:calc(100 * var(--ViewSDK-mobile-viewport-height)) !important;
+        max-width:100vw !important; max-height:calc(100 * var(--ViewSDK-mobile-viewport-height)) !important;
+        position:fixed; top:0; left:0; z-index:9999;
+        margin: 0 !important; padding: 0 !important;
+        border: none !important;
+    }</style><style type="text/css">.ViewSDK_LBLoader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10000;
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #1473E6;
+        width: 56px !important;
+        height: 56px !important;
+        margin: -32px 0 0 -32px;
+        border-radius: 50%;
+        -webkit-animation: lbSpin 2s linear infinite;
+        animation: lbSpin 2s linear infinite;
+    }
+    @-webkit-keyframes lbSpin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes lbSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }</style></head>
+<body>
+
+
+  <section class="hero" style="height: 100vh; display: flex; flex-direction: column; justify-content: center;;">
+    <div class="hero-body">
+      <h4 class="title publication-title" style="text-align: center; font-size: 41px">
+        ScaleCrafter: Tuning-free Higher-Resolution Visual Generation <br>
+        with Diffusion Models
+      </h4>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="is-size-5 publication-authors" style="text-align: center; font-size: x-small; margin-top: -45px;">
+      <!-- Paper authors -->
+      <span class="author-block">
+        <a href="https://github.com/YingqingHe" target="_blank">Yingqing He</a><sup>* 1</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://yingqinghe.github.io/scalecrafter/" target="_blank">Shaoshu Yang</a><sup>* 2</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://yingqinghe.github.io/scalecrafter/#" target="_blank">Haoxin Chen</a><sup>3</sup>
+      </span>
+      <span class="author-block">
+        <a href="http://vinthony.github.io/" target="_blank">Xiaodong Cun</a><sup>3</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://menghanxia.github.io/" target="_blank">Menghan Xia</a><sup>3</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://yzhang2016.github.io/" target="_blank">Yong Zhang</a><sup># 3</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://xinntao.github.io/" target="_blank">Xintao Wang</a><sup>3</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://yingqinghe.github.io/scalecrafter/#" target="_blank">Ran He</a><sup>2</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://cqf.io/" target="_blank">Qifeng Chen</a><sup># 1</sup>
+      </span>
+      <span class="author-block">
+        <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=4oXBp9UAAAAJ" target="_blank">Ying Shan</a><sup>3</sup>
+      </span>
+    </div>
+    <div class="is-size-5 publication-authors" style="text-align: center; font-size: x-small; ">
+      <span class="author-block">
+        <sup>1</sup> Hong Kong University of Science and Technology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <sup>2</sup> Chinese Academy of Sciences  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <sup>3</sup> Tencent AI Lab  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <br>
+        (<sup>*</sup> Equal Contribution &nbsp;&nbsp; <sup>#</sup> Corresponding Author)
+    </span></div>
+    <h5 class="is-size-4" style="text-align: center; font-size: 35px">
+      ICLR 2024 Spotlight <br>
+    </h5>
+    <div class="column has-text-centered" style="margin: 0 0;">
+      <div class="publication-links" style="margin: 0 0;">
+        <span class="link-block">
+          <a href="https://arxiv.org/abs/2310.07702" target="_blank" class="external-link is-normal is-rounded is-dark">
+            <span class="icon">
+              <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+            </span>
+            <span>Paper</span>
+          </a>
+        </span>
+        <!-- Github link -->
+        <span class="link-block" style="margin: 0 0;">
+          <a href="https://github.com/YingqingHe/ScaleCrafter" target="_blank" class="external-link is-normal is-rounded is-dark">
+            <span class="icon">
+              <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+      </div>
+    </div>
+
+    <!-- <video autoplay muted controls="" loop="" style="height: 75vh; margin: auto; text-align: center;  margin-left: 50px; margin-right: 50px;"> <source src="videos-2k/0189_randk2-seed135.mp4" type="video/mp4"></video> -->
+    <div id="carousel" class="carousel carousel-vid" style="overflow: hidden; height:100vh; margin-top: 0px;">
+      <!-- <div class="img-txt" style="height:75vh">
+        <img src="images/sdxl/4096x4096/000.png" alt="图片" style="height:75vh">
+        <p>Generated image with resolution of <span style="color:#974EC3">4096 x 4096</span>. 
+          <br><span style="font-size: small;">Input: “Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies, cream roses, sea holly thistle and cream, gold and navy ribbons”</span></p>
+      </div> -->
+      
+      
+      
+      
+      
+      
+      
+    <div id="slidere183de39-3e0c-4a7e-8c16-1ed7a28b3a25" class="slider" tabindex="0">
+    <div class="slider-container" style="opacity: 1; width: 17850px; transition: none 0s ease 0s; transform: translate3d(-2100px, 0px, 0px);"><div class="slider-item" data-slider-index="-2" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/77be262cd3ae5a58b030cc272a385043.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “a beautiful woman smiling on a bridge, facing camera, close-up shot, sunset, cinematic, super detailed face”</span></p>
+      </div></div><div class="slider-item" data-slider-index="-1" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/c86faa360420e78f37cd517294ef13f9.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A fluffy baby sloth with an orange knitted hat”</span></p>
+      </div></div><div class="slider-item is-slide-next" data-slider-index="0" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0002_randk0-seed1123.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “a girl in astronaut outfit in the spaceship turning around, cinematic, super detailed face”</span></p>
+      </div></div><div class="slider-item" data-slider-index="1" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0189_randk2-seed135.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “Aerial autumn forest with a river in the mountains”</span></p>
+      </div></div><div class="slider-item" data-slider-index="2" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0005_randk1-seed154.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A beautiful girl on a boat”</span></p>
+      </div></div><div class="slider-item" data-slider-index="3" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0029_randk0-seed131.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A majestic eagle soars high above the treetops, surveying its territory.”</span></p>
+      </div></div><div class="slider-item" data-slider-index="4" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/46d3d24f02bd3e974200cee0faf05ef1.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “an iron man walking on the new york times square, cinematic”</span></p>
+      </div></div><div class="slider-item is-slide-previous" data-slider-index="5" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/77be262cd3ae5a58b030cc272a385043.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “a beautiful woman smiling on a bridge, facing camera, close-up shot, sunset, cinematic, super detailed face”</span></p>
+      </div></div><div class="slider-item is-current" data-slider-index="6" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/c86faa360420e78f37cd517294ef13f9.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A fluffy baby sloth with an orange knitted hat”</span></p>
+      </div></div><div class="slider-item" data-slider-index="7" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0002_randk0-seed1123.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “a girl in astronaut outfit in the spaceship turning around, cinematic, super detailed face”</span></p>
+      </div></div><div class="slider-item" data-slider-index="8" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0189_randk2-seed135.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “Aerial autumn forest with a river in the mountains”</span></p>
+      </div></div><div class="slider-item" data-slider-index="9" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0005_randk1-seed154.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A beautiful girl on a boat”</span></p>
+      </div></div><div class="slider-item" data-slider-index="10" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0029_randk0-seed131.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A majestic eagle soars high above the treetops, surveying its territory.”</span></p>
+      </div></div><div class="slider-item" data-slider-index="11" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/46d3d24f02bd3e974200cee0faf05ef1.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “an iron man walking on the new york times square, cinematic”</span></p>
+      </div></div><div class="slider-item" data-slider-index="12" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/77be262cd3ae5a58b030cc272a385043.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “a beautiful woman smiling on a bridge, facing camera, close-up shot, sunset, cinematic, super detailed face”</span></p>
+      </div></div><div class="slider-item" data-slider-index="13" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/c86faa360420e78f37cd517294ef13f9.mov" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “A fluffy baby sloth with an orange knitted hat”</span></p>
+      </div></div><div class="slider-item" data-slider-index="14" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+        <video autoplay="" muted="" controls="" loop="" dth="1000px">
+          <source src="videos-2k/0002_randk0-seed1123.mp4" type="video/mp4">
+        </video>
+        <p>Generated video with resolution of <span style="color:#974EC3">2048 x 1152</span>. 
+          <br><span style="font-size: small;">Input: “a girl in astronaut outfit in the spaceship turning around, cinematic, super detailed face”</span></p>
+      </div></div></div>
+  <div class="slider-navigation-previous"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+    </svg></div>
+<div class="slider-navigation-next"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+    </svg></div><div class="slider-pagination"><div class="slider-page is-active" data-index="0"></div><div class="slider-page" data-index="1"></div><div class="slider-page" data-index="2"></div><div class="slider-page" data-index="3"></div><div class="slider-page" data-index="4"></div><div class="slider-page" data-index="5"></div><div class="slider-page" data-index="6"></div></div></div></div>
+    <!-- <p style="text-align: center; margin-bottom: 100px; "> Generated video of <i>“Aerial autumn forest with a river in the mountains"</i> of resolution <span style="color:#974EC3">2048 x 1152</span> 
+    (with a latent video diffusion model trained on <span style="color:#974EC3">1024 x 576</span>). </p> -->
+  </section>
+
+
+<section class="hero is-small">
+  <div class="page">
+    <div class="hero-body" style="width: 80vw; margin: auto">
+      <div class="content has-text-justified">
+        <hr>
+        <p style="text-align: center;"> Generate an <b>image</b> of <i>“A panda is surfing in the universe” of resolution</i> <span style="color:#974EC3">1024 x 1024</span> 
+          using SD 2.1 trained on <span style="color:#974EC3">512 x 512</span></p>
+        <table style="margin: 0 auto; width: 100%">
+          <tbody><tr>
+            <td style="width: 20%;"><img src="./ScaleCrafter_files/directinf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" alt="图片"></td>
+            <td style="width: 20%;"><img src="./ScaleCrafter_files/attnsf-00001-A-panda-is-surfing-in-the-universe.-seed51.jpg" alt="图片"></td>
+            <td style="width: 20%;"><img src="./ScaleCrafter_files/multi-A-panda-is-surfing-in-the-universe.jpg" alt="图片"></td>
+            <td style="width: 20%;"><img src="./ScaleCrafter_files/sync-sample_seed_000051.png" alt="图片"></td>
+            <td style="width: 20%;"><img src="./ScaleCrafter_files/ours-A-panda-is-surfing-in-the-universe.-seed51.jpg" alt="图片"></td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: 500; width: 20%;">1. Direct Inference</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">2. Scaling Attention <br>[Jin et al. 2023]</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">3. MultiDiffusion<br>[Bar-Tal et al. 2023]</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">4. SyncDiffusion<br>[Lee et al. 2023]</td>
+            <td style="text-align: center; font-weight: 500; width: 20%;">5. <span style="font-weight: 1000;">Ours</span></td>
+          </tr>
+        </tbody></table>
+        <br>
+        <p style="text-align: center;"> Generate a <b>video</b> of <i>“An astronaut is waving his hands on the moon"</i> of resolution <span style="color:#974EC3">1024 x 640</span> 
+          <br>using a latent video diffusion model trained on <span style="color:#974EC3">512 x 320</span> </p>
+        <table style="margin: 0 auto;">
+          <tbody><tr>
+            <td style="width: 33%;"><video autoplay="" muted="" controls="" loop=""> <source src="compare-videos/sdori-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
+            <td style="width: 33%;"><video autoplay="" muted="" controls="" loop=""> <source src="compare-videos/attnsf-0000_randk0-seed123_000.mp4" type="video/mp4"></video></td>
+            <td style="width: 33%;"><video autoplay="" muted="" controls="" loop=""> <source src="compare-videos/0205.mp4" type="video/mp4"></video></td>
+          </tr>
+          <tr>
+            <td style="text-align: center; font-weight: 500;">1. Direct Inference</td>
+            <td style="text-align: center; font-weight: 500;">2. Scaling Attention</td>
+            <td style="text-align: center; font-weight: 500;">3. <span style="font-weight: 1000;">Ours</span></td>
+          </tr>
+        </tbody></table>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+    <br>
+    <div style="background-color: #ececec;">
+    <br>
+    <div class="container-small">
+      <h2 class="title is-3"><strong>Abstract</strong></h2><strong>
+      <p style="font-size: 14px;">
+        In this work, we investigate the capability of generating images from pre-trained diffusion models at much higher resolutions than the training image sizes. 
+        In addition, the generated images should have arbitrary image aspect ratios. 
+        When generating images directly at a higher resolution, 1024 x 1024, with the pre-trained Stable Diffusion using training images of resolution 512 x 512, 
+        we observe persistent problems of object repetition and unreasonable object structures. 
+        Existing works for higher-resolution generation, such as attention-based and joint-diffusion approaches, cannot well address these issues. 
+        As a new perspective, we examine the structural components of the U-Net in diffusion models and identify the crucial cause as the limited perception field of convolutional kernels. 
+        Based on this key observation, we propose a simple yet effective re-dilation that can dynamically adjust the convolutional perception field during inference. 
+        We further propose the dispersed convolution and noise-damped classifier-free guidance, which can enable ultra-high-resolution image generation (e.g., 4096 x 4096). 
+        Notably, our approach does not require any training or optimization. 
+        Extensive experiments demonstrate that our approach can address the repetition issue well and achieve state-of-the-art performance on higher-resolution image synthesis, 
+        especially in texture details. 
+        Our work also suggests that a pre-trained diffusion model trained on low-resolution images can be directly used for high-resolution visual generation without further tuning, 
+        which may provide insights for future research on ultra-high-resolution image and video synthesis. 
+      </p>
+    </strong></div><strong>
+    <br>
+  </strong></div><strong>
+
+  
+</strong></section><strong>
+
+<br>
+<section class="hero is-small">
+  <!-- <div style="background-color:#FAF3F0;"> -->
+    <h2 class="title is-3"><strong>Results</strong></h2><strong>
+  <div class="hero-body">
+      <div class="content has-text-justified">
+        <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD XL</strong></h3><strong>
+        <p style="text-align: center"> Utilizing a pretrained model trained on a resolution of <span style="color: #974EC3;">1024 x 1024</span>, our method can generate images with a resolution of up to <span style="color: #974EC3;">4096 x 4096</span> <i style="color:#ac354b">without the need for training/optimization</i>. </p>
+        <div id="carousel" class="carousel">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <div id="slider9ce8f586-6a5e-41ba-bcb7-91b7fc7b49d8" class="slider" tabindex="0">
+    <div class="slider-container" style="opacity: 1; width: 18900px; transition: none 0s ease 0s; transform: translate3d(-1800px, 0px, 0px);"><div class="slider-item" data-slider-index="-2" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies, cream roses, sea holly thistle and cream, gold and navy ribbons..jpg”</p>
+          </div></div><div class="slider-item" data-slider-index="-1" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/16 Inch Anime The Jungle Book Backpack For Teenagers Boys Girls School Bags Travel Bag Children School Backpacks Gift.jpg" alt="图片">
+            <p>Resolution: 2048x2048; Prompt: “16 Inch Anime The Jungle Book Backpack For Teenagers Boys Girls School Bags Travel Bag Children School Backpacks Gift”</p>
+          </div></div><div class="slider-item is-slide-next" data-slider-index="0" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/000.png" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “Miniature house with plants in the potted area, hyper realism, dramatic ambient lighting, high detail”</p>
+          </div></div><div class="slider-item" data-slider-index="1" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style.jpg" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style”</p>
+          </div></div><div class="slider-item" data-slider-index="2" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/North sunset in Norway. Stunning sea view from mountains. Beautiful bay in evening sunlight. Lofoten islands landscape..jpg" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “North sunset in Norway. Stunning sea view from mountains. Beautiful bay in evening sunlight. Lofoten islands landscape.”</p>
+          </div></div><div class="slider-item" data-slider-index="3" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/A cherry blossom tree in full bloom amidst an arctic tundra showering petals on a polar bear.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “A cherry blossom tree in full bloom amidst an arctic tundra showering petals on a polar bear”</p>
+          </div></div><div class="slider-item" data-slider-index="4" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/baby succulents from ikea interior pinterest plants cacti and flora. Black Bedroom Furniture Sets. Home Design Ideas.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “baby succulents from ikea interior pinterest plants cacti and flora. Black Bedroom Furniture Sets. Home Design Ideas”</p>
+          </div></div><div class="slider-item" data-slider-index="5" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Handmade Watercolor Painting, home decor .jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Handmade Watercolor Painting, home decor”</p>
+          </div></div><div class="slider-item" data-slider-index="6" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Placemats Sunflower Summer Landscape Heat Stain Resistant Non-Slip Place Mats for Kitchen Dining Table 12 x 18 Inch 4 Pc.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Placemats Sunflower Summer Landscape Heat Stain Resistant Non-Slip Place Mats for Kitchen Dining Table 12 x 18 Inch 4 Pc”</p>
+          </div></div><div class="slider-item is-slide-previous" data-slider-index="7" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies, cream roses, sea holly thistle and cream, gold and navy ribbons..jpg”</p>
+          </div></div><div class="slider-item is-current" data-slider-index="8" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/16 Inch Anime The Jungle Book Backpack For Teenagers Boys Girls School Bags Travel Bag Children School Backpacks Gift.jpg" alt="图片">
+            <p>Resolution: 2048x2048; Prompt: “16 Inch Anime The Jungle Book Backpack For Teenagers Boys Girls School Bags Travel Bag Children School Backpacks Gift”</p>
+          </div></div><div class="slider-item" data-slider-index="9" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/000.png" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “Miniature house with plants in the potted area, hyper realism, dramatic ambient lighting, high detail”</p>
+          </div></div><div class="slider-item" data-slider-index="10" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style.jpg" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “Close up of a pair of vibrant koi fish swim upstream, surmounting a waterfall, oil painting style”</p>
+          </div></div><div class="slider-item" data-slider-index="11" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/North sunset in Norway. Stunning sea view from mountains. Beautiful bay in evening sunlight. Lofoten islands landscape..jpg" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “North sunset in Norway. Stunning sea view from mountains. Beautiful bay in evening sunlight. Lofoten islands landscape.”</p>
+          </div></div><div class="slider-item" data-slider-index="12" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/A cherry blossom tree in full bloom amidst an arctic tundra showering petals on a polar bear.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “A cherry blossom tree in full bloom amidst an arctic tundra showering petals on a polar bear”</p>
+          </div></div><div class="slider-item" data-slider-index="13" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/baby succulents from ikea interior pinterest plants cacti and flora. Black Bedroom Furniture Sets. Home Design Ideas.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “baby succulents from ikea interior pinterest plants cacti and flora. Black Bedroom Furniture Sets. Home Design Ideas”</p>
+          </div></div><div class="slider-item" data-slider-index="14" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Handmade Watercolor Painting, home decor .jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Handmade Watercolor Painting, home decor”</p>
+          </div></div><div class="slider-item" data-slider-index="15" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Placemats Sunflower Summer Landscape Heat Stain Resistant Non-Slip Place Mats for Kitchen Dining Table 12 x 18 Inch 4 Pc.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Placemats Sunflower Summer Landscape Heat Stain Resistant Non-Slip Place Mats for Kitchen Dining Table 12 x 18 Inch 4 Pc”</p>
+          </div></div><div class="slider-item" data-slider-index="16" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies.jpg" alt="图片">
+            <p>Resolution: 4096x2048; Prompt: “Spring Magnolia and Thistle bouquet. Featuring bronze magnolia leaves, woodland greeneries, pussywillow, blush, scarlet and pink peonies, cream roses, sea holly thistle and cream, gold and navy ribbons..jpg”</p>
+          </div></div><div class="slider-item" data-slider-index="17" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/16 Inch Anime The Jungle Book Backpack For Teenagers Boys Girls School Bags Travel Bag Children School Backpacks Gift.jpg" alt="图片">
+            <p>Resolution: 2048x2048; Prompt: “16 Inch Anime The Jungle Book Backpack For Teenagers Boys Girls School Bags Travel Bag Children School Backpacks Gift”</p>
+          </div></div><div class="slider-item" data-slider-index="18" data-cloned="true" style="width: 900px;"><div class="img-txt">
+            <img src="./ScaleCrafter_files/000.png" alt="图片">
+            <p>Resolution: 4096x4096; Prompt: “Miniature house with plants in the potted area, hyper realism, dramatic ambient lighting, high detail”</p>
+          </div></div></div>
+  <div class="slider-navigation-previous"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+    </svg></div>
+<div class="slider-navigation-next"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+    </svg></div><div class="slider-pagination"><div class="slider-page is-active" data-index="0"></div><div class="slider-page" data-index="1"></div><div class="slider-page" data-index="2"></div><div class="slider-page" data-index="3"></div><div class="slider-page" data-index="4"></div><div class="slider-page" data-index="5"></div><div class="slider-page" data-index="6"></div><div class="slider-page" data-index="7"></div><div class="slider-page" data-index="8"></div></div></div></div>
+      </strong></div><strong>
+    </strong></div><strong>
+  
+
+    <div style="background-color: #ececec;">
+      <div class="hero-body">
+        <br>
+        <h3 class="title is-4"><strong>Higher-Resolution Synthsized Videos with Latent Video Diffusion Models</strong></h3><strong>
+        <p style="text-align: center"> Utilizing a pretrained model trained on a resolution of <span style="color: #974EC3;">512 x 320</span>, 
+          our method can generate videos of <span style="color: #974EC3;">1024 x 640</span> resolution <i style="color:#ac354b">without the need for training/optimization</i>. </p>
+          <div id="carousel" class="carousel carousel-vid">
+          
+
+          
+
+          
+
+          
+
+          
+
+          <!-- <div class="vid-txt">
+            <video autoplay muted controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0188.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A girl is looking at the camera smiling. High Definition.”</p>
+          </div> -->
+
+          <!-- <div class="vid-txt">
+            <video autoplay muted controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0205.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “An astronaut is waving his hands on the moon”</p>
+          </div> -->
+
+          
+
+          
+        <div id="slidere623470f-c0a1-48d7-b19c-c9a77a9fa33a" class="slider" tabindex="0">
+    <div class="slider-container" style="opacity: 1; width: 17850px; transition: all 300ms ease 0s; transform: translate3d(-3150px, 0px, 0px);"><div class="slider-item" data-slider-index="-2" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0207.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A fat rabbit wearing a purple robe walking through a fantasy landscape.”</p>
+          </div></div><div class="slider-item" data-slider-index="-1" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0208.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Teddy bear walking down 5th Avenue, front view, beautiful sunset, close up, high definition, 4k.”</p>
+          </div></div><div class="slider-item is-current" data-slider-index="0" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0011.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Ironman is fighting against the enemy, big fire in the background, photorealistic, 4k”</p>
+          </div></div><div class="slider-item is-slide-previous is-slide-next" data-slider-index="1" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0042.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A solemn tortoise slowly ambles along, carrying its home on its back.”</p>
+          </div></div><div class="slider-item" data-slider-index="2" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0044.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A charming raccoon stealthily rummages through a homeowner's trash can.”</p>
+          </div></div><div class="slider-item" data-slider-index="3" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0157.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A panda playing on a swing set”</p>
+          </div></div><div class="slider-item" data-slider-index="4" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0176.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Close up of grapes on a rotating table. High Definition.”</p>
+          </div></div><div class="slider-item" data-slider-index="5" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0207.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A fat rabbit wearing a purple robe walking through a fantasy landscape.”</p>
+          </div></div><div class="slider-item" data-slider-index="6" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0208.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Teddy bear walking down 5th Avenue, front view, beautiful sunset, close up, high definition, 4k.”</p>
+          </div></div><div class="slider-item" data-slider-index="7" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0011.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Ironman is fighting against the enemy, big fire in the background, photorealistic, 4k”</p>
+          </div></div><div class="slider-item" data-slider-index="8" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0042.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A solemn tortoise slowly ambles along, carrying its home on its back.”</p>
+          </div></div><div class="slider-item" data-slider-index="9" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0044.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A charming raccoon stealthily rummages through a homeowner's trash can.”</p>
+          </div></div><div class="slider-item" data-slider-index="10" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0157.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A panda playing on a swing set”</p>
+          </div></div><div class="slider-item" data-slider-index="11" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0176.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Close up of grapes on a rotating table. High Definition.”</p>
+          </div></div><div class="slider-item" data-slider-index="12" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0207.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “A fat rabbit wearing a purple robe walking through a fantasy landscape.”</p>
+          </div></div><div class="slider-item" data-slider-index="13" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0208.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Teddy bear walking down 5th Avenue, front view, beautiful sunset, close up, high definition, 4k.”</p>
+          </div></div><div class="slider-item" data-slider-index="14" data-cloned="true" style="width: 1050px;"><div class="vid-txt">
+            <video autoplay="" muted="" controls="" loop="" width="1000px" height="1000px">
+              <source src="videos/0011.mp4" type="video/mp4">
+            </video>
+            <p>Resolution: 1024x640; Prompt: “Ironman is fighting against the enemy, big fire in the background, photorealistic, 4k”</p>
+          </div></div></div>
+  <div class="slider-navigation-previous"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+    </svg></div>
+<div class="slider-navigation-next"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+    </svg></div><div class="slider-pagination"><div class="slider-page" data-index="0"></div><div class="slider-page is-active" data-index="1"></div><div class="slider-page" data-index="2"></div><div class="slider-page" data-index="3"></div><div class="slider-page" data-index="4"></div><div class="slider-page" data-index="5"></div><div class="slider-page" data-index="6"></div></div></div></div>
+      </strong></div><strong>
+    </strong></div><strong>
+
+
+    <div class="hero-body">
+      <br>
+      <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD 2.1</strong></h3><strong>
+      <p style="text-align: center"> Utilizing a pretrained model trained on a resolution of <span style="color: #974EC3;">512 x 512</span>, 
+        whlie our method can generate images with a resolution of up to <span style="color: #974EC3;">2048 x 2048</span> <i style="color:#ac354b">without 
+          the need for training/optimization</i>. </p>
+      <div id="carousel" class="carousel">
+        
+        
+        
+        
+        
+        
+        <!-- <div class="img-txt">
+          <img src="images/SDv2-1/2048x1024/1-rank0-iter0-poster-of-a-mechanical-cute-cat..jpg" alt="图片">
+          <p>“poster of a mechanical cute cat”</p>
+        </div> -->
+        <!-- <div class="img-txt">
+          <img src="images/SDv2-1/2048x1024/10-rank0-iter3-Maine-Coon_seed56_sample13.jpg" alt="图片">
+          <p>“Maine Coon”</p> -->
+        <!-- </div> -->
+        
+        
+        
+        
+        
+        <!-- <div class="img-txt">
+          <img src="images/SDv2-1/2048x1024/6-rank2-iter1-A-Cute-Puppy-with-wings,-in-sky,-photorealistic,-high-detail_seed58_sample4.jpg" alt="图片">
+          <p>"A Cute Puppy with wings, in sky, photorealistic, high detail"</p>
+        </div> -->
+        <!-- <div class="img-txt">
+          <img src="images/SDv2-1/2048x1024/6-rank2-iter1-A-Cute-Puppy-with-wings,-in-sky,-photorealistic,-high-detail_seed58_sample5.jpg" alt="图片">
+          <p>"A Cute Puppy with wings, in sky, photorealistic, high detail"</p>
+        </div> -->
+        
+        
+        
+        
+        <!-- <div class="img-txt">
+          <img src="images/SDv2-1/1024x1024/00003-poster-of-a-mechanical-cute-cat.s-seed52.jpg" alt="图片">
+          <p>Resolution: 1024x1024; “poster of a mechanical cute cat”</p>
+        </div> -->
+        
+        
+      <div id="slider2a698765-ddc9-4570-98f6-f05ae6ab7efa" class="slider" tabindex="0">
+    <div class="slider-container" style="opacity: 1; width: 33300px; transition: all 300ms ease 0s; transform: translate3d(-3600px, 0px, 0px);"><div class="slider-item" data-slider-index="-2" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00004-A-rabbit-is-riding-a-bicycle-in-New-York-Street-seed50.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “A rabbit is riding a bicycle in New York Street”</p>
+        </div></div><div class="slider-item" data-slider-index="-1" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/45-rank0-iter4-Stack-coins-with-plants-to-grow-into-steps.-business-growth-.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “Stack coins with plants to grow into steps”</p>
+        </div></div><div class="slider-item is-slide-previous" data-slider-index="0" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/292-rank0-iter29-HDR-Image-of-Yosemite-Falls.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “HDR Image of Yosemite Falls”</p>
+        </div></div><div class="slider-item is-current" data-slider-index="1" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/7-rank0-iter3-Maine-Coon_seed56_sample2.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: "Maine Coon"</p>
+        </div></div><div class="slider-item is-slide-next" data-slider-index="2" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/13-rank0-iter1-Picture-the-sky,-stones,-Norway,-Mountain-Sunrice.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “Picture the sky, stones, Norway, Mountain Sunrice”</p>
+        </div></div><div class="slider-item" data-slider-index="3" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/27-rank1-iter2-winter-sunset-lighthouse-snow-iceland-oru-2015-snaefellsnes-.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “winter sunset lighthouse snow iceland”</p>
+        </div></div><div class="slider-item" data-slider-index="4" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00001-A-corgi-sits-on-a-beach-chair-on-a-beautiful-beach,-with-palm-trees-behind,-high-details.-seed51.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: “A corgi sits on a beach chair on a beautiful beach, with palm trees behind, high details"</p>
+        </div></div><div class="slider-item" data-slider-index="5" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00005-A-car-in-a-garden,-with-a-lake-and-Eiffel-Tower-seed58.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A car in a garden, with a lake and Eiffel Tower”</p>
+        </div></div><div class="slider-item" data-slider-index="6" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/11-rank1-iter3-a-photo-of-wonder-woman_seed57_sample3.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "a photo of wonder woman"</p>
+        </div></div><div class="slider-item" data-slider-index="7" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/14-rank1-iter4-The-winding-Great-Wall-of-China-in-autumn_seed57_sample0.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "The winding Great Wall of China in autumn"</p>
+        </div></div><div class="slider-item" data-slider-index="8" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/3-rank2-iter0-A-Cute-Puppy-with-wings,-Cartoon-Drawings,-high-details_seed58_sample18.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A Cute Puppy with wings, Cartoon Drawings, high details"</p>
+        </div></div><div class="slider-item" data-slider-index="9" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/6-rank0-iter5-A-photo-of-a-raccoon-wearing-an-astronaut-helmet,-looking-ou.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A photo of a raccoon wearing an astronaut helmet, looking out"</p>
+        </div></div><div class="slider-item" data-slider-index="10" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/6-rank2-iter1-A-Cute-Puppy-with-wings,-in-sky,-photorealistic,-high-detail_seed58_sample12.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A Cute Puppy with wings, in sky, photorealistic, high detail"</p>
+        </div></div><div class="slider-item" data-slider-index="11" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/8-rank1-iter2-Sushi-Roll-on-a-wooden-table_seed57_sample17.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "Sushi Roll on a wooden table"</p>
+        </div></div><div class="slider-item" data-slider-index="12" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00002-photo-of-a-cat-holding-a-pineapple-seed52.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “photo of a cat holding a pineapple”</p>
+        </div></div><div class="slider-item" data-slider-index="13" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00014-A-rabbit-is-skateboarding-in-Time-Square-seed50.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “A rabbit is skateboarding in Time Square”</p>
+        </div></div><div class="slider-item" data-slider-index="14" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/4-rank0-iter3-cherry-with-water-splashed-in-all-directions-in-a-bowl. 2.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “cherry with water splashed in all directions in a bowl”</p>
+        </div></div><div class="slider-item" data-slider-index="15" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00004-A-rabbit-is-riding-a-bicycle-in-New-York-Street-seed50.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “A rabbit is riding a bicycle in New York Street”</p>
+        </div></div><div class="slider-item" data-slider-index="16" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/45-rank0-iter4-Stack-coins-with-plants-to-grow-into-steps.-business-growth-.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “Stack coins with plants to grow into steps”</p>
+        </div></div><div class="slider-item" data-slider-index="17" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/292-rank0-iter29-HDR-Image-of-Yosemite-Falls.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “HDR Image of Yosemite Falls”</p>
+        </div></div><div class="slider-item" data-slider-index="18" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/7-rank0-iter3-Maine-Coon_seed56_sample2.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: "Maine Coon"</p>
+        </div></div><div class="slider-item" data-slider-index="19" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/13-rank0-iter1-Picture-the-sky,-stones,-Norway,-Mountain-Sunrice.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “Picture the sky, stones, Norway, Mountain Sunrice”</p>
+        </div></div><div class="slider-item" data-slider-index="20" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/27-rank1-iter2-winter-sunset-lighthouse-snow-iceland-oru-2015-snaefellsnes-.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “winter sunset lighthouse snow iceland”</p>
+        </div></div><div class="slider-item" data-slider-index="21" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00001-A-corgi-sits-on-a-beach-chair-on-a-beautiful-beach,-with-palm-trees-behind,-high-details.-seed51.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: “A corgi sits on a beach chair on a beautiful beach, with palm trees behind, high details"</p>
+        </div></div><div class="slider-item" data-slider-index="22" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00005-A-car-in-a-garden,-with-a-lake-and-Eiffel-Tower-seed58.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A car in a garden, with a lake and Eiffel Tower”</p>
+        </div></div><div class="slider-item" data-slider-index="23" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/11-rank1-iter3-a-photo-of-wonder-woman_seed57_sample3.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "a photo of wonder woman"</p>
+        </div></div><div class="slider-item" data-slider-index="24" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/14-rank1-iter4-The-winding-Great-Wall-of-China-in-autumn_seed57_sample0.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "The winding Great Wall of China in autumn"</p>
+        </div></div><div class="slider-item" data-slider-index="25" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/3-rank2-iter0-A-Cute-Puppy-with-wings,-Cartoon-Drawings,-high-details_seed58_sample18.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A Cute Puppy with wings, Cartoon Drawings, high details"</p>
+        </div></div><div class="slider-item" data-slider-index="26" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/6-rank0-iter5-A-photo-of-a-raccoon-wearing-an-astronaut-helmet,-looking-ou.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A photo of a raccoon wearing an astronaut helmet, looking out"</p>
+        </div></div><div class="slider-item" data-slider-index="27" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/6-rank2-iter1-A-Cute-Puppy-with-wings,-in-sky,-photorealistic,-high-detail_seed58_sample12.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "A Cute Puppy with wings, in sky, photorealistic, high detail"</p>
+        </div></div><div class="slider-item" data-slider-index="28" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/8-rank1-iter2-Sushi-Roll-on-a-wooden-table_seed57_sample17.jpg" alt="图片">
+          <p>Resolution: 2048x1024; Prompt: "Sushi Roll on a wooden table"</p>
+        </div></div><div class="slider-item" data-slider-index="29" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00002-photo-of-a-cat-holding-a-pineapple-seed52.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “photo of a cat holding a pineapple”</p>
+        </div></div><div class="slider-item" data-slider-index="30" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00014-A-rabbit-is-skateboarding-in-Time-Square-seed50.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “A rabbit is skateboarding in Time Square”</p>
+        </div></div><div class="slider-item" data-slider-index="31" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/4-rank0-iter3-cherry-with-water-splashed-in-all-directions-in-a-bowl. 2.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “cherry with water splashed in all directions in a bowl”</p>
+        </div></div><div class="slider-item" data-slider-index="32" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/00004-A-rabbit-is-riding-a-bicycle-in-New-York-Street-seed50.jpg" alt="图片">
+          <p>Resolution: 1024x1024; Prompt: “A rabbit is riding a bicycle in New York Street”</p>
+        </div></div><div class="slider-item" data-slider-index="33" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/45-rank0-iter4-Stack-coins-with-plants-to-grow-into-steps.-business-growth-.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “Stack coins with plants to grow into steps”</p>
+        </div></div><div class="slider-item" data-slider-index="34" data-cloned="true" style="width: 900px;"><div class="img-txt">
+          <img src="./ScaleCrafter_files/292-rank0-iter29-HDR-Image-of-Yosemite-Falls.jpg" alt="图片">
+          <p>Resolution: 2048x2048; Prompt: “HDR Image of Yosemite Falls”</p>
+        </div></div></div>
+  <div class="slider-navigation-previous"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+    </svg></div>
+<div class="slider-navigation-next"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+    </svg></div><div class="slider-pagination"><div class="slider-page" data-index="0"></div><div class="slider-page" data-index="1"></div><div class="slider-page is-active" data-index="2"></div><div class="slider-page" data-index="3"></div><div class="slider-page" data-index="4"></div><div class="slider-page" data-index="5"></div><div class="slider-page" data-index="6"></div><div class="slider-page" data-index="7"></div><div class="slider-page" data-index="8"></div><div class="slider-page" data-index="9"></div><div class="slider-page" data-index="10"></div><div class="slider-page" data-index="11"></div><div class="slider-page" data-index="12"></div><div class="slider-page" data-index="13"></div><div class="slider-page" data-index="14"></div><div class="slider-page" data-index="15"></div><div class="slider-page" data-index="16"></div></div></div></div>
+    </strong></div><strong>
+
+
+    <div style="background-color: #ececec;">
+      <br>
+      <div class="hero-body">
+        <div class="content has-text-justified">
+          <h3 class="title is-4"><strong>Higher-Resolution Synthsized Images with SD 1.5</strong></h3><strong>
+          <p style="text-align: center"> Utilizing a pretrained model trained on a resolution of <span style="color: #974EC3;">512 x 512</span>, 
+            our method can generate images with a resolution of up to <span style="color: #974EC3;">2048 x 2048</span> <i style="color:#ac354b">
+              without the need for training/optimization</i>. </p>
+          <div id="carousel" class="carousel">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          <div id="slider88528230-54e8-4305-a126-ac29b7f03496" class="slider" tabindex="0">
+    <div class="slider-container" style="opacity: 1; width: 22500px; transition: all 300ms ease 0s; transform: translate3d(-4500px, 0px, 0px);"><div class="slider-item" data-slider-index="-2" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A picturesque mountain scene with a clear lake reflecting the surrounding peaks.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
+            </div></div><div class="slider-item" data-slider-index="-1" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A tranquil garden filled with blooming flowers and a small fountain2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A tranquil garden filled with blooming flowers and a small fountain”</p>
+            </div></div><div class="slider-item" data-slider-index="0" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A rustic wooden cabin nestled in a snowy forest2.jpg" alt="图片">
+              <p>Resolution: 2048x2048; Prompt: “A rustic wooden cabin nestled in a snowy forest”</p>
+            </div></div><div class="slider-item is-slide-previous" data-slider-index="1" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A dog wearing a Superhero outfit with red cape flying through the sky.jpg" alt="图片">
+              <p>Resolution: 2048x1024; Prompt: “A dog wearing a Superhero outfit with red cape flying through the sky”</p>
+            </div></div><div class="slider-item is-current" data-slider-index="2" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A picturesque mountain scene with a clear lake reflecting the surrounding peaks2.jpg" alt="图片">
+              <p>Resolution: 2048x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
+            </div></div><div class="slider-item is-slide-next" data-slider-index="3" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A squirrel eating an acorn in a forest.jpg" alt="图片">
+              <p>Resolution: 2048x1024; Prompt: “A squirrel eating an acorn in a forest”</p>
+            </div></div><div class="slider-item" data-slider-index="4" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A beautiful sunset over a calm ocean with a lighthouse in the distance2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A beautiful sunset over a calm ocean with a lighthouse in the distance”</p>
+            </div></div><div class="slider-item" data-slider-index="5" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A butterfly landing on a sunflower.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A butterfly landing on a sunflower”</p>
+            </div></div><div class="slider-item" data-slider-index="6" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A charming raccoon stealthily rummages through a homeowner&#39;s trash can.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A charming raccoon stealthily rummages through a homeowner's trash can”</p>
+            </div></div><div class="slider-item" data-slider-index="7" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A confused grizzly bear in calculus class.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A confused grizzly bear in calculus class”</p>
+            </div></div><div class="slider-item" data-slider-index="8" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A fox peeking out from behind a bush2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A fox peeking out from behind a bush”</p>
+            </div></div><div class="slider-item" data-slider-index="9" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A picturesque mountain scene with a clear lake reflecting the surrounding peaks.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
+            </div></div><div class="slider-item" data-slider-index="10" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A tranquil garden filled with blooming flowers and a small fountain2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A tranquil garden filled with blooming flowers and a small fountain”</p>
+            </div></div><div class="slider-item" data-slider-index="11" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A rustic wooden cabin nestled in a snowy forest2.jpg" alt="图片">
+              <p>Resolution: 2048x2048; Prompt: “A rustic wooden cabin nestled in a snowy forest”</p>
+            </div></div><div class="slider-item" data-slider-index="12" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A dog wearing a Superhero outfit with red cape flying through the sky.jpg" alt="图片">
+              <p>Resolution: 2048x1024; Prompt: “A dog wearing a Superhero outfit with red cape flying through the sky”</p>
+            </div></div><div class="slider-item" data-slider-index="13" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A picturesque mountain scene with a clear lake reflecting the surrounding peaks2.jpg" alt="图片">
+              <p>Resolution: 2048x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
+            </div></div><div class="slider-item" data-slider-index="14" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A squirrel eating an acorn in a forest.jpg" alt="图片">
+              <p>Resolution: 2048x1024; Prompt: “A squirrel eating an acorn in a forest”</p>
+            </div></div><div class="slider-item" data-slider-index="15" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A beautiful sunset over a calm ocean with a lighthouse in the distance2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A beautiful sunset over a calm ocean with a lighthouse in the distance”</p>
+            </div></div><div class="slider-item" data-slider-index="16" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A butterfly landing on a sunflower.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A butterfly landing on a sunflower”</p>
+            </div></div><div class="slider-item" data-slider-index="17" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A charming raccoon stealthily rummages through a homeowner&#39;s trash can.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A charming raccoon stealthily rummages through a homeowner's trash can”</p>
+            </div></div><div class="slider-item" data-slider-index="18" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A confused grizzly bear in calculus class.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A confused grizzly bear in calculus class”</p>
+            </div></div><div class="slider-item" data-slider-index="19" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A fox peeking out from behind a bush2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A fox peeking out from behind a bush”</p>
+            </div></div><div class="slider-item" data-slider-index="20" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A picturesque mountain scene with a clear lake reflecting the surrounding peaks.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A picturesque mountain scene with a clear lake reflecting the surrounding peaks”</p>
+            </div></div><div class="slider-item" data-slider-index="21" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A tranquil garden filled with blooming flowers and a small fountain2.jpg" alt="图片">
+              <p>Resolution: 1024x1024; Prompt: “A tranquil garden filled with blooming flowers and a small fountain”</p>
+            </div></div><div class="slider-item" data-slider-index="22" data-cloned="true" style="width: 900px;"><div class="img-txt">
+              <img src="./ScaleCrafter_files/A rustic wooden cabin nestled in a snowy forest2.jpg" alt="图片">
+              <p>Resolution: 2048x2048; Prompt: “A rustic wooden cabin nestled in a snowy forest”</p>
+            </div></div></div>
+  <div class="slider-navigation-previous"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+    </svg></div>
+<div class="slider-navigation-next"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+    </svg></div><div class="slider-pagination"><div class="slider-page" data-index="0"></div><div class="slider-page" data-index="1"></div><div class="slider-page" data-index="2"></div><div class="slider-page is-active" data-index="3"></div><div class="slider-page" data-index="4"></div><div class="slider-page" data-index="5"></div><div class="slider-page" data-index="6"></div><div class="slider-page" data-index="7"></div><div class="slider-page" data-index="8"></div><div class="slider-page" data-index="9"></div><div class="slider-page" data-index="10"></div></div></div></div>
+        </strong></div><strong>
+      </strong></div><strong>
+    </strong></div><strong>
+
+    <div class="hero-body">
+      <br>
+      <h3 class="title is-4"><strong>Compare with baselines on Text-to-Panorama Generation</strong></h3><strong>
+        <p style="text-align: center; font-weight: 200;">We generate panorama of resolution 3072 x 512 following SyncDiffusion. 
+          <br> As shown below, our approach generate much more plausible and natural global structures than baselines,
+          <br> which exhibit repetitive semantics (1,2,3,4) and incoherent layout (3,4) issues.
+        </p>
+
+      <div id="carousel" class="carousel" style="width:750px; overflow: hidden;">
+        
+        
+        
+      <div id="slidera3a37423-ff0d-4780-b3ad-a41ae1546104" class="slider" tabindex="0">
+    <div class="slider-container" style="opacity: 1; width: 6750px; transition: none 0s ease 0s; transform: translate3d(-1500px, 0px, 0px);"><div class="slider-item" data-slider-index="-2" data-cloned="true" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="./ScaleCrafter_files/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A beach with palm trees.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A beach with palm trees(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/14-rank1-iter3-A-beach-with-palm-trees_seed52_sample3.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A beach with palm trees”</p>
+        </div></div><div class="slider-item" data-slider-index="-1" data-cloned="true" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="./ScaleCrafter_files/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A film photo of a beachside street under the sunset.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A film photo of a beachside street under the sunset(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/11-rank0-iter10-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0 2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A film photo of a beachside street under the sunset”</p>
+        </div></div><div class="slider-item is-slide-next" data-slider-index="0" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1. Direct Inference</span>
+          <img src="./ScaleCrafter_files/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A photo of a lake under the northern lights.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A photo of a lake under the northern lights(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/4-rank3-iter0-A-photo-of-a-lake-under-the-northern-lights_seed54_sample2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A photo of a lake under the northern lights”</p>
+        </div></div><div class="slider-item is-slide-previous" data-slider-index="1" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="./ScaleCrafter_files/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A beach with palm trees.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A beach with palm trees(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/14-rank1-iter3-A-beach-with-palm-trees_seed52_sample3.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A beach with palm trees”</p>
+        </div></div><div class="slider-item is-current" data-slider-index="2" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="./ScaleCrafter_files/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A film photo of a beachside street under the sunset.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A film photo of a beachside street under the sunset(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/11-rank0-iter10-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0 2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A film photo of a beachside street under the sunset”</p>
+        </div></div><div class="slider-item" data-slider-index="3" data-cloned="true" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1. Direct Inference</span>
+          <img src="./ScaleCrafter_files/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A photo of a lake under the northern lights.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A photo of a lake under the northern lights(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/4-rank3-iter0-A-photo-of-a-lake-under-the-northern-lights_seed54_sample2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A photo of a lake under the northern lights”</p>
+        </div></div><div class="slider-item" data-slider-index="4" data-cloned="true" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="./ScaleCrafter_files/2-rank0-iter1-A-beach-with-palm-trees_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A beach with palm trees.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A beach with palm trees(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/14-rank1-iter3-A-beach-with-palm-trees_seed52_sample3.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A beach with palm trees”</p>
+        </div></div><div class="slider-item" data-slider-index="5" data-cloned="true" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1.Direct Inference</span>
+          <img src="./ScaleCrafter_files/3-rank0-iter2-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A film photo of a beachside street under the sunset.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A film photo of a beachside street under the sunset(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/11-rank0-iter10-A-film-photo-of-a-beachside-street-under-the-sunset_seed51_sample0 2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A film photo of a beachside street under the sunset”</p>
+        </div></div><div class="slider-item" data-slider-index="6" data-cloned="true" style="width: 750px;"><div class="baseline-img">
+          <img src="./ScaleCrafter_files/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0.jpg" alt="图片">
+          <span style="font-size: 10px">1. Direct Inference</span>
+          <img src="./ScaleCrafter_files/1-rank0-iter0-A-photo-of-a-lake-under-the-northern-lights_seed51_sample0(1).jpg" alt="图片">
+          <span style="font-size: 10px">2. Attention-SF</span>
+          <img src="./ScaleCrafter_files/A photo of a lake under the northern lights.png" alt="图片">
+          <span style="font-size: 10px">3. MultiDiffusion</span>
+          <img src="./ScaleCrafter_files/A photo of a lake under the northern lights(1).png" alt="图片">
+          <span style="font-size: 10px">4. SyncDiffusion</span>
+          <img src="./ScaleCrafter_files/4-rank3-iter0-A-photo-of-a-lake-under-the-northern-lights_seed54_sample2.jpg" alt="图片">
+          <span style="font-size: 10px">Ours</span>
+          <p>“A photo of a lake under the northern lights”</p>
+        </div></div></div>
+  <div class="slider-navigation-previous"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+    </svg></div>
+<div class="slider-navigation-next"><svg viewBox="0 0 50 80" xml:space="preserve">
+      <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+    </svg></div><div class="slider-pagination"><div class="slider-page is-active" data-index="0"></div><div class="slider-page" data-index="1"></div><div class="slider-page" data-index="2"></div></div></div></div>
+    </strong></div><strong>
+      
+    
+    
+  
+</strong></strong></strong></strong></strong></strong></section><strong><strong><strong>
+
+
+
+
+</strong></strong></strong></strong></body></html>
