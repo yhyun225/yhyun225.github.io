@@ -171,6 +171,82 @@ border-left: 5px solid rgb(255, 180, 240);
   margin: 0 10px;
 }
 
+.marquee-wrapper{
+  text-align:center;
+}
+.marquee-wrapper .container{
+  overflow:hidden;
+}
+.marquee-inner span{
+  float:left;
+  width:50%;
+}
+.marquee-wrapper .marquee-block{
+  height: 90vh;
+  width: calc(588px * (var(--total-marquee-items)));
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px auto;
+  background:#f5f5f5;
+  padding: 30px 0;
+}
+.marquee-inner{
+  display: block;
+  width: 200%;
+  position: absolute;
+}
+.marquee-inner p{
+  /* font-weight: 600;
+  font-size: 20px; */
+  /* font-family: cursive; */
+  font-family: 'century-gothic';
+}
+.marquee-inner.to-left{
+  animation: marqueeLeft 25s linear infinite;
+}
+.marquee-inner.to-right{
+  animation: marqueeRight 25s linear infinite;
+}
+.marquee-item{
+  width: 25%;
+  height: 150%;
+  display: flex;
+  margin: 0 10px;
+  float: left;
+  transition: all .3s ease-out;
+  background:#f9ecec;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.marquee-item img{
+  /* width: 300px; */
+}
+.marquee-item p {
+  margin-bottom: -10px; /* 设置 <p> 元素的下外边距为 10px */
+}
+.marquee-item .resolution {
+  margin-bottom: -10px; /* 设置 <p> 元素的下外边距为 10px */
+}
+@keyframes marqueeLeft{
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes marqueeRight{
+  0% { 
+    left: -100%; 
+  }
+  100% {
+   left: 0; 
+  }
+}
+
 .carousel {
   display: flex;
   place-items: center;
@@ -185,7 +261,7 @@ border-left: 5px solid rgb(255, 180, 240);
 }
 
 .img-txt{
-  padding: 140px;
+  padding: 120px;
   text-align: center;
   margin: auto;
   height: 700px;
