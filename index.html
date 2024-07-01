@@ -228,12 +228,12 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">DWT Visualization</h2>
       <div class="content has-text-justified">
-          <video poster="" id="" autoplay="" controls="" muted="" loop="" playinline="">
+          <video poster="" id="" autoplay="" controls="" muted="" loop="false" playinline="">
             <source src="./static/videos/dwt_visualization2.mp4" type="video/mp4">
           </video>
           <p align="justify">
             We visualize the DWT components of predicted clean images corresponding to each
-            DDIM timesteps, both (only) progressive and DiffuseHigh. 
+            DDIM timesteps, for both progressive(W/O DWT) and DiffuseHigh(W/ DWT). 
             As observed, in case of our proposed DiffuseHigh, a large amount of 
             low-frequency components are preserved throughout the denoising process. 
             These low-frequency components hold useful structural property, 
