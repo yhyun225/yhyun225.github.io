@@ -108,7 +108,7 @@
   <div class="hero-body">
     <div class="content has-text-justified">
       <h3 class="title is-4">
-        <p>Generated <font color="646EFF">4K</font> images with DiffuseHigh + SDXL.</p>
+        <p>Generated <font color="646EFF">4K (16x resolution)</font> images with DiffuseHigh + SDXL.</p>
       </h3>
       <!-- <h6 class="subtitle has-text-centered">
         <p>Generated <font color="646EFF">4K</font> images with DiffuseHigh + SDXL.</p>
@@ -116,37 +116,49 @@
       </h6> -->
 
       <div id="carousel" class="carousel is-max-desktop">
-        <!-- <div class="img-txt">
-          <img src="./static/images/sdxl_4K_coffee.png">
-          <p><i>"A steaming cup of coffee resting on a saucer, with wisps of steam curling upwards."</i></p>
-        </div> -->
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_icecream.png">
+          <img src="./static/images/sdxl_4K/magic_garden_4K.jpg">
+          <p><i>"A fairy garden with glowing flowers and tiny, winged creatures.</i></p>
+        </div>
+        <div class="img-txt">
+          <img src="./static/images/sdxl_4K/antler_4K.jpg">
+          <p><i>"A glowing white stag with crystal antlers in a magical forest."</i></p>
+        </div>
+        <div class="img-txt">
+          <img src="./static/images/sdxl_4K/elf_4K.jpg">
+          <p><i>"A regal fairy queen with luminescent wings and a crown of flowers, surrounded by shimmering fireflies and mystical fog, depicted in a vibrant, impressionistic oil painting."</i></p>
+        </div>
+        <div class="img-txt">
+          <img src="./static/images/sdxl_4K/icecream_4K.jpg">
           <p><i>"Cinematic photo of delicious chocolate icecream."</i></p>
         </div>
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_baby_bunny.png">
-          <p><i>"A baby bunny sitting on a stack of pancakes."</i></p>
+          <img src="./static/images/sdxl_4K/tiger_4K.jpg">
+          <p><i>"A highly detailed oil painting of tiger."</i></p>
         </div>
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_magical_island.png">
-          <p><i>"A magical floating island in the sky, adorned with colorful hot air balloons and exotic flora."</i></p>
+          <img src="./static/images/sdxl_4K/gogh_village_4K.jpg">
+          <p><i>"A Van Gogh-inspired night sky over a quiet village."</i></p>
         </div>
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_racoon.png">
-          <p><i>"Ninja racoon in cyberpunk, neonpunk style, photorealistic, 4K."</i></p>
+          <img src="./static/images/sdxl_4K/metal_eagle_4K.jpg">
+          <p><i>"A cybernetic eagle with metallic feathers."</i></p>
         </div>
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_miniature.png">
-          <p><i>"Miniature house with plants in the potted area, hyper realism, dramatic ambient lighting, high detail."</i></p>
+          <img src="./static/images/sdxl_4K/fairy_4K.jpg">
+          <p><i>"A mystical elf with emerald green eyes and a crown of leaves, standing in a forest glade bathed in soft moonlight."</i></p>
         </div>
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_roman.png">
-          <p><i>"Closeup Roman statue of aristoteles black and white made of marble, artstation award-winning, photorealistic."</i></p>
+          <img src="./static/images/sdxl_4K/phoenix_4K.jpg">
+          <p><i>"A phoenix rising from its ashes in a fiery burst."</i></p>
         </div>
         <div class="img-txt">
-          <img src="./static/images/sdxl_4K_macarons.png">
-          <p><i>"A stack of colorful macarons arranged delicately on a pastel-colored cake stand."</i></p>
+          <img src="./static/images/sdxl_4K/neon_hero_4K.jpg">
+          <p><i>"Cyberpunk hero with neon tattoos and futuristic armor."</i></p>
+        </div>
+        <div class="img-txt">
+          <img src="./static/images/sdxl_4K/owl_4K.jpg">
+          <p><i>"A wise owl perched on a branch, surrounded by swirling magical energy."</i></p>
         </div>
       </div>
     </div>
@@ -162,29 +174,19 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-                Recent surge in large-scale generative models has spurred the development 
-                of vast fields in computer vision. 
-                In particular, text-to-image diffusion models have garnered widespread adoption 
-                across diverse domain due to their potential for high-fidelity image generation. 
-                Nonetheless, existing large-scale diffusion models are confined to 
-                generate images of up to 1K resolution, 
-                which is far from meeting the demands of contemporary commercial applications. 
-                Directly sampling higher-resolution images often yields results 
-                marred by artifacts such as object repetition and distorted shapes. 
-                Addressing the aforementioned issues typically necessitates 
-                training or fine-tuning models on higher resolution datasets. 
-                However, this undertaking poses a formidable challenge due to 
-                the difficulty in collecting large-scale high-resolution contents 
-                and substantial computational resources. 
-                While several preceding works have proposed alternatives, 
-                they often fail to produce convincing results. 
-                In this work, we probe the generative ability of diffusion models 
-                at higher resolution beyond its original capability and 
-                propose a novel progressive approach that fully utilizes 
-                generated low-resolution image to guide the generation of higher resolution image. 
-                Our method obviates the need for additional training or fine-tuning 
-                which significantly lowers the burden of computational costs. 
-                Extensive experiments and results validate the efficiency and efficacy of our method.
+              Large-scale generative models, such as text-to-image diffusion models, 
+              have garnered widespread attention across diverse domains due to their creative and high-fidelity image generation. 
+              Nonetheless, existing large-scale diffusion models are confined to generating images of up to 1K resolution, 
+              which is far from meeting the demands of contemporary commercial applications. 
+              Directly sampling higher-resolution images often yields results marred by artifacts such as object repetition and distorted shapes. 
+              Addressing the aforementioned issues typically necessitates training or fine-tuning models on higher-resolution datasets. 
+              However, this poses a formidable challenge due to the difficulty in collecting large-scale high-resolution images and substantial computational resources. 
+              While several preceding works have proposed alternatives to bypass the cumbersome training process, 
+              they often fail to produce convincing results. In this work, we probe the generative ability of diffusion models at higher resolution 
+              beyond their original capability and propose a novel progressive approach that fully utilizes generated low-resolution images 
+              to guide the generation of higher-resolution images. 
+              Our method obviates the need for additional training or fine-tuning which significantly lowers the burden of computational costs. 
+              Extensive experiments and results validate the efficiency and efficacy of our method.
             </p>
           </div>
         </div>
@@ -202,7 +204,7 @@
           <h2 class="title is-3">DiffuseHigh</h2>
           <div class="content has-text-justified">
             <div style="margin-top: 20px">
-              <img src="./static/images/main_figure.png">
+              <img src="./static/images/figure_pipeline.jpg">
             </div>
             <p align="justify">
                 Progressive approach frequently encounters challenges in 
@@ -230,7 +232,7 @@
     
   </section>
 
-<section>
+<!-- <section>
   <div class="hero-body">
     <div class="container is-max-desktop">
       <h2 class="title is-3">DWT Visualization</h2>
@@ -252,7 +254,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
   
 <section class="section" id="BibTeX">
