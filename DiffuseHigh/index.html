@@ -183,6 +183,32 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Concurrent Work. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Ablating DiffuseHigh Components</h2>
+          <div class="content has-text-justified">
+            <div style="margin-top: 20px">
+              <img src="./static/images/figure_ablation1.jpg">
+            </div>
+            <p align="justify">
+              We validate the role of each component involved in our pipeline. 
+              As illustrated, our structural guidance enables the generated image to preserve essential structures. 
+              By forcing the denoising process to maintain the low-frequency details of the sample, 
+              which is obtained from well-structured low-resolution images, 
+              samples with our DWT-based structural guidance present desirable structures and shapes. 
+              However, samples without structural guidance tend to have deformed shapes (mouth of the hedgehog in (a)) or artifacts (dots around the face in (b)). 
+              Also, we observed that the sharpening operation involved in our pipeline further enhances the quality of the image, 
+              particularly on blurred object boundaries or smoothed textures of the image ((c) and (d)).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="content has-text-justified">
